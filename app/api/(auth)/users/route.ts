@@ -2,7 +2,6 @@ import connect from "@/lib/db";
 import User from "@/lib/models/user";
 import { NextResponse } from "next/server"
 import { Types } from "mongoose";
-import JSXStyle from "styled-jsx/style";
 
 
 const ObjectId = require("mongoose").Types.ObjectId;
