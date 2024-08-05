@@ -17,7 +17,7 @@ const connect = async () => {
 
   try{
     mongoose.connect(MONGODB_URI!, {
-      dbName: "REST APIs with Next.js",
+      dbName: "REST_APIs_with_Nextjs",
       bufferCommands: true
     });
     console.log("Connected");
