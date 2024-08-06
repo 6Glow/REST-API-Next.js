@@ -1,3 +1,4 @@
 {
-  "/api/(dashboard)/categories/[category]/route": "app/api/(dashboard)/categories/[category]/route.js"
+  "/api/(dashboard)/categories/[category]/route": "app/api/(dashboard)/categories/[category]/route.js",
+  "/api/(dashboard)/categories/route": "app/api/(dashboard)/categories/route.js"
 }
