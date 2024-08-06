@@ -37,7 +37,7 @@ export const PATCH = async (request: Request, context: {params: any}) => {
 
     if(!user) {
       return new NextResponse(JSON.stringify({ message: "User not found" }), { 
-        status: 400
+        status: 404
       }
     )
   }
