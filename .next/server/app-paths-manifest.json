@@ -1,1 +1,3 @@
-{}
+{
+  "/api/(dashboard)/blogs/route": "app/api/(dashboard)/blogs/route.js"
+}
