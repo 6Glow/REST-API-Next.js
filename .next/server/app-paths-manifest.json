@@ -1,1 +1,3 @@
-{}
+{
+  "/api/(dashboard)/categories/[category]/route": "app/api/(dashboard)/categories/[category]/route.js"
+}
