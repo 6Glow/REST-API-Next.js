@@ -14,15 +14,15 @@ export const GET = async(request: Request) => {
 
     if(!userId || !Types.ObjectId.isValid(userId)){
       return new NextResponse(
-        JSON.stringify({ message: "Invalid of missing userId" }), {
+        JSON.stringify({ message: "Invalid or missing userId" }), {
           status: 400,
         }
       )
     }
 
-    if(!categoryId || !Types.ObjectId.isValid(userId)) {
+    if(!categoryId || !Types.ObjectId.isValid(categoryId)) {
       return new NextResponse(
-        JSON.stringify({ message: "Invalid of missing categoryId" }), {
+        JSON.stringify({ message: "Invalid or missing categoryId" }), {
           status: 400
         }
       )
@@ -76,7 +76,7 @@ export const POST = async (request: Request) => {
 
     if(!userId || !Types.ObjectId.isValid(userId)){
       return new NextResponse(
-        JSON.stringify({ message: "Invalid of missing userId" }), {
+        JSON.stringify({ message: "Invalid or missing userId" }), {
           status: 400,
         }
       )
@@ -84,7 +84,7 @@ export const POST = async (request: Request) => {
 
     if(!categoryId || !Types.ObjectId.isValid(userId)) {
       return new NextResponse(
-        JSON.stringify({ message: "Invalid of missing categoryId" }), {
+        JSON.stringify({ message: "Invalid or missing categoryId" }), {
           status: 400
         }
       )
@@ -101,7 +101,7 @@ export const POST = async (request: Request) => {
   }
 
   const category = await Category.findById(categoryId);
-  if(!categoryId){
+  if(!category){
     return new NextResponse(
       JSON.stringify({ message: "Category not found" }), {
         status: 404

@@ -23,9 +23,9 @@ export const PATCH = async (request: Request, context: {params: any}) => {
       )
     }
 
-    if(!categoryId || !Types.ObjectId.isValid(userId)) {
+    if(!categoryId || !Types.ObjectId.isValid(categoryId)) {
       return new NextResponse(
-        JSON.stringify({ message: "Invalid of missing categoryId" }), {
+        JSON.stringify({ message: "Invalid or missing categoryId" }), {
           status: 400
         }
       )
@@ -92,9 +92,9 @@ export const DELETE = async (request: Request, context: {params: any}) => {
       })
     }
 
-    if(!categoryId || !Types.ObjectId.isValid(userId)) {
+    if(!categoryId || !Types.ObjectId.isValid(categoryId)) {
       return new NextResponse(
-        JSON.stringify({ message: "Invalid of missing categoryId" }), {
+        JSON.stringify({ message: "Invalid or missing categoryId" }), {
           status: 400
         }
       )
