@@ -1,0 +1,165 @@
+# Основные системные файлы
+.DS_Store
+Thumbs.db
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.swn
+
+# Папки кэша и временные папки
+cache/
+tmp/
+temp/
+logs/
+node_modules/
+bower_components/
+dist/
+out/
+build/
+target/
+
+# Файлы конфигурации среды разработки
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.pssproj
+
+# Файлы настройки операционных систем
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+
+# Файлы конфигурации редакторов
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyo
+*.pyd
+*.egg
+*.egg-info
+dist/
+build/
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Ruby
+*.gem
+*.rbc
+.ruby-version
+.ruby-gemset
+.rake_tasks~
+.rspec~
+/.bundle/
+/vendor/bundle/
+/lib/bundler/man/
+.ruby-gemset
+.ruby-version
+.sass-cache/
+
+# Java
+*.class
+*.war
+*.ear
+*.jar
+*.iml
+*.ipr
+*.iws
+*.project
+.classpath
+.settings/
+target/
+bin/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+vendor/
+Godeps/
+
+# PHP
+composer.phar
+vendor/
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+
+# Архивы и сжатые файлы
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.gz
+*.bz2
+
+# Microsoft Office
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*.swo
+*.swn
+
+# Linux
+*~
+.nfs*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Yarn
+.pnp.*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.yarn/*.tgz
+.yarn/patches
+
+
+
+.env
