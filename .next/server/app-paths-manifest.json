@@ -1,3 +1,10 @@
 {
-  "/api/(dashboard)/blogs/route": "app/api/(dashboard)/blogs/route.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/(auth)/users/route": "app/api/(auth)/users/route.js",
+  "/api/(dashboard)/categories/route": "app/api/(dashboard)/categories/route.js",
+  "/api/(dashboard)/blogs/route": "app/api/(dashboard)/blogs/route.js",
+  "/api/(dashboard)/categories/[category]/route": "app/api/(dashboard)/categories/[category]/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
+  "/api/(dashboard)/blogs/[blog]/route": "app/api/(dashboard)/blogs/[blog]/route.js"
 }
