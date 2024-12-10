@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js REST API with MongoDB
 
-## Getting Started
+A modern, full-featured REST API built with Next.js 14, MongoDB, and TypeScript, featuring user authentication, blog management, and category organization.
 
-First, run the development server:
+## 🚀 Features
 
+- **User Management**
+  - User registration and authentication
+  - Secure password handling
+  - Profile management
+
+- **Blog Management**
+  - Create, read, update, and delete blog posts
+  - Category-based organization
+  - Search functionality with keywords
+  - Date-based filtering
+  - Pagination support
+
+- **Category System**
+  - Create and manage blog categories
+  - Category-based blog organization
+  - User-specific categories
+
+- **API Security**
+  - Token-based authentication
+  - Request validation
+  - Error handling
+  - Middleware support
+
+## 🛠️ Tech Stack
+
+- Next.js 14
+- MongoDB with Mongoose
+- TypeScript
+- RESTful API design
+- Authentication middleware
+- Logging system
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd rest-api-next.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+Create a `.env` file in the root directory with:
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+## 🔑 API Endpoints
 
-To learn more about Next.js, take a look at the following resources:
+### Users
+- `GET /api/users` - Get all users
+- `POST /api/users` - Create a new user
+- `PATCH /api/users` - Update user
+- `DELETE /api/users` - Delete user
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Categories
+- `GET /api/categories` - Get user categories
+- `POST /api/categories` - Create category
+- `PATCH /api/categories/{categoryId}` - Update category
+- `DELETE /api/categories/{categoryId}` - Delete category
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Blogs
+- `GET /api/blogs` - Get blogs with filters
+- `POST /api/blogs` - Create blog
+- `GET /api/blogs/{blogId}` - Get specific blog
+- `PATCH /api/blogs/{blogId}` - Update blog
+- `DELETE /api/blogs/{blogId}` - Delete blog
 
-## Deploy on Vercel
+## 📝 API Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Authentication
+Include the authentication token in the request headers:
+```javascript
+headers: {
+  'Authorization': 'Bearer your_token_here'
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Query Parameters
+- `userId` - User identifier
+- `categoryId` - Category identifier
+- `keywords` - Search keywords
+- `startDate` - Filter start date
+- `endDate` - Filter end date
+- `page` - Page number for pagination
+- `limit` - Items per page
+
+### Example Request
+```javascript
+// Get blogs with filters
+GET /api/blogs?userId=123&categoryId=456&keywords=tech&page=1&limit=10
+```
+
+## 🔒 Security
+
+- Authentication middleware validates tokens
+- Request validation for required fields
+- MongoDB connection security
+- Error handling and logging
+
+## 📊 Project Structure
+
+```
+├── app/
+│   ├── api/
+│   │   ├── (auth)/
+│   │   │   └── users/
+│   │   └── (dashboard)/
+│   │       ├── blogs/
+│   │       └── categories/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── lib/
+│   ├── db.ts
+│   └── models/
+│       ├── blog.ts
+│       ├── category.ts
+│       └── user.ts
+└── middlewares/
+    └── api/
+        ├── authMiddleware.ts
+        └── logMiddleware.ts
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- MongoDB team for the reliable database
+- Open source community for inspiration and support
