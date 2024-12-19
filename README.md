@@ -40,7 +40,7 @@ A modern, full-featured REST API built with Next.js 14, MongoDB, and TypeScript,
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/6Glow/REST-API-Next.js
 cd rest-api-next.js
 ```
 
